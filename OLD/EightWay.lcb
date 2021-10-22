@@ -104,23 +104,19 @@ private handler getSelectedDPad() returns String
    return mSelectedKey["index"] formatted as string
 end handler
 private handler setSelectedDPad(in pSelect as String)
-   variable tObject as Array
-   variable tIndex as Number
-   --  put pSelect into mSelectedDPad
+  variable tIndex as Number
   put pSelect parsed as number into tIndex
-  put tIndex into mSelectedDPad
   log tIndex
   if tIndex > 0 and tIndex < 9 then
+	  variable tObject as Array
 		if mSelectedKey is not nothing then
-         if tIndex is not mSelectedKey["index"] then
-            put tIndex into mSelectedKey["index"]
-            put element tIndex of mObjectList into tObject
-            post "DPadOff" with [ mSelectedKey["position"] , mSelectedKey["name"]]
+	      -- put mSelectedKey["circleSlice"] into tPath
+	      post "DPadOff" with [ mSelectedKey["position"] , mSelectedKey["name"]]
 	      -- post "DPadOff" to my script object with [ mSelectedKey["position"] , mSelectedKey["name"]]
-	         put false into tObject["hilighted"]
-	         put tObject into element (mSelectedKey["index"]) of mObjectList
-	         put nothing into mSelectedKey
-         end if
+	      put element mSelectedKey["index"] of mObjectList into tObject
+	      put false into tObject["hilighted"]
+	      put tObject into element (mSelectedKey["index"]) of mObjectList
+	      put nothing into mSelectedKey
 	   end if
 		put element tIndex of mObjectList into tObject
 		-- put tObject["circleSlice"] into tPath
@@ -134,6 +130,7 @@ private handler setSelectedDPad(in pSelect as String)
 		redraw all
 	end if
 end handler
+
 
 --------------------------------------------------------------------------------------------------------------
 --- called when widget is created
