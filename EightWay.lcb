@@ -31,7 +31,7 @@ Handle the DPadOff message in the widget's object script to respond to release o
 */
 
 -- declaring extension as widget, followed by identifier
-widget community.livecode.widget.piano
+widget org.openxtalk.widget.piano
 
 -- dependancy declarations
 use com.livecode.canvas
