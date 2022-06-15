@@ -1,2 +1,6 @@
-# LCB_VirtualDPad
- LiveCode Builder Virtual Directional Pad
+# OpenXTalk Virtual D-Pad
+ This Extension Builder Virtual D-Pad widget is a UI element that can be used in place of 
+ a Game Controller Joystick or Directional-Pad. 
+ It has 8 directional buttons arranged in a circle with an adjustable 
+ "dead-zone" at it's center.
+
