@@ -1,0 +1,34 @@
+import module org.openxtalk.widget.piano
+  use com.livecode.canvas
+  use com.livecode.library.widgetutils
+  use com.livecode.arithmetic
+  use com.livecode.binary
+  use com.livecode.string
+  use com.livecode.widget
+  use com.livecode.logic
+  use com.livecode.array
+  use com.livecode.list
+  use com.livecode.engine
+  use com.livecode.type
+  use com.livecode.byte
+  handler setBorderWidth(in pNumber as Number) returns nothing
+  variable mSelectedDPad as Number
+  handler OnCreate() returns optional any
+  handler OnGeometryChanged() returns optional any
+  handler OnPaint() returns optional any
+  handler OnSave(out rProperties as Array) returns optional any
+  handler OnLoad(in pProperties as Array) returns optional any
+  variable mMouseButtonIsDown as Boolean
+  handler OnMouseUp() returns optional any
+  handler OnMouseCancel() returns optional any
+  handler OnMouseEnter() returns optional any
+  handler OnMouseDown() returns optional any
+  handler OnMouseMove() returns optional any
+  handler setMaintainAspectRatio(in pBoolean as Boolean) returns optional any
+  handler setColor(in pColor as String) returns nothing
+  handler getColor() returns String
+  handler setHiliteColor(in pColor as String) returns nothing
+  handler getHiliteColor() returns String
+  handler hitTestPath(in pPoint as Point, in pPath as Path, in pStrokeWidth as Number, in pWithin as Boolean) returns Boolean
+  handler scaleAndMaintainAspectRatioTransform(in pSrcBounds as Rectangle, in pDestBounds as Rectangle, in pConstraintBounds as Rectangle) returns Transform
+end module

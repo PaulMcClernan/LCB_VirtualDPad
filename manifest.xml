@@ -1,5 +1,5 @@
 <package version="0.0">
-  <name>community.livecode.widget.piano</name>
+  <name>org.openxtalk.widget.piano</name>
   <title>EightWay</title>
   <author>Paul McClernan</author>
   <version>0.1</version>
